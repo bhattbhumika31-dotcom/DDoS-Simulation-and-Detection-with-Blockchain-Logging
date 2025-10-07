@@ -1,0 +1,29 @@
+[
+    {
+        "index": 1,
+        "timestamp": 1678886400.0,
+        "data": "Genesis Block: DDoS Log Chain Start",
+        "prev_hash": "0",
+        "detection_status": "genesis",
+        "is_attack": false,
+        "hash": "84e54854f3b7f8c0a876a44b9b94236e651e44f8f4803b9b47e5c94e9f39d10e"
+    },
+    {
+        "index": 2,
+        "timestamp": 1678886410.5,
+        "ip": "192.168.1.12",
+        "detection_status": "normal",
+        "is_attack": false,
+        "prev_hash": "84e54854f3b7f8c0a876a44b9b94236e651e44f8f4803b9b47e5c94e9f39d10e",
+        "hash": "a4d3b8f2c5e1d09a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a"
+    },
+    {
+        "index": 3,
+        "timestamp": 1678886415.2,
+        "ip": "192.0.2.101",
+        "detection_status": "detected",
+        "is_attack": true,
+        "prev_hash": "a4d3b8f2c5e1d09a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a",
+        "hash": "b5e4c9g3d6f2e10b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3b4c"
+    }
+]
