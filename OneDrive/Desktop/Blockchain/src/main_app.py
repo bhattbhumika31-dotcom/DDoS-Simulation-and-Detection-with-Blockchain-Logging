@@ -1,7 +1,6 @@
 import threading
-import time
-import json
 import os
+import time
 from flask import Flask, render_template, jsonify
 from src.networking_module import ServerHandler, TrafficSimulator
 from src.detection_module import DetectionModule
@@ -61,9 +60,11 @@ def start_traffic_simulator(attack=False):
 
 def stop_simulation_threads():
     global app_context
-    if app_context['sim_thread'] and app_context['sim_thread'].is_alive():
-        TrafficSimulator.stop_flag.set()
+    TrafficSimulator.stop_flag.set() 
+    
+    if app_context['sim_thread']:
         app_context['sim_thread'].join(timeout=1)
+    
     app_context['simulation_running'] = False
     print("Simulation threads stopped.")
 
@@ -78,7 +79,6 @@ def get_status():
     global app_context
     
     server_alive = app_context['server_thread'] and app_context['server_thread'].is_alive()
-    
     sim_alive = app_context['sim_thread'] and app_context['sim_thread'].is_alive()
 
     is_valid, validation_msg = app_context['logger'].validate_chain()
