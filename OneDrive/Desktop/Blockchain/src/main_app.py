@@ -6,7 +6,7 @@ import sys
 import os
 
 try:
-    from src.networking_module import ServerHandler, TrafficSimulator, HOST, PORT
+    from src.traffic_simulator import ServerHandler, TrafficSimulator, HOST, PORT
     
     from src.blockchain_logger import BlockchainLogger
     from src.detection_module import DetectionModule
