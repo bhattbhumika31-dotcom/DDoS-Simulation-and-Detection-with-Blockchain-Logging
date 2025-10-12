@@ -35,4 +35,4 @@ def record_request(ip, phase):
         "timestamp": datetime.now().strftime("%H:%M:%S")
     }
     log_data_event(event)
- return event
+    return event
